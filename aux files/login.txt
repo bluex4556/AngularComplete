@@ -1,0 +1,9 @@
+Customer
+--------
+username -ishaan
+password - ishaan
+
+Manager
+--------
+username -manager
+password - manager

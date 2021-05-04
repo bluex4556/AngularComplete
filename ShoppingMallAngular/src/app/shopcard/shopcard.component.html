@@ -1,0 +1,12 @@
+<div class="box">
+    <div class="slide-img">
+        <img src="{{shop.shopImageUrl}}" alt="">
+    </div>
+    <!-- Detail box -->
+    <div class="detail-box">
+        <div class="type">
+            <a *ngIf="manager else customer" [routerLink]="['/manage',shop.shopId]">{{shop.shopName}} </a>
+            <ng-template #customer><a [routerLink]="['/shop',shop.shopId]">{{shop.shopName}} </a></ng-template>
+        </div>
+    </div>
+</div>

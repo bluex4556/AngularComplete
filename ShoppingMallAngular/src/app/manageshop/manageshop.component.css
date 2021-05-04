@@ -1,0 +1,50 @@
+#back-img{
+    background: url('https://www.teahub.io/photos/full/3-31559_abstract-wallpaper-h-background-abstract-images-hd.jpg') no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: 100%;
+}
+.table_n {
+    width: 800px;
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+table.fixed {
+    table-layout: fixed;
+}
+
+td,
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td:nth-child(1) {
+    width: 400px;
+}
+
+td:nth-child(2) {
+    width: 30%;
+}
+
+td:nth-child(3) {
+    width: 30%;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+td{
+    cursor: pointer;
+}

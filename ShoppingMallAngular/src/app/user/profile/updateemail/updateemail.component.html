@@ -1,0 +1,13 @@
+<br>
+<div class="container">
+    <form [formGroup]="updateEmailForm" (ngSubmit)="onSubmit(updateEmailForm.value)">
+        <h1>Update Email</h1>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" formControlName="email">
+        </div>
+        <br>
+       <button type="submit" class="btn btn-primary btn-lg" [disabled]="updateEmailForm.invalid">Submit</button>
+    </form>
+
+</div>

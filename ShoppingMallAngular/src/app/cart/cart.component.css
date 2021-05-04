@@ -1,0 +1,214 @@
+.table {
+    width: 900px;
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cart .table thead tr th {
+    border-top: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom: 0px;
+}
+
+.cart .table tbody tr td {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    vertical-align: middle;
+    align-self: center;
+}
+
+.cart .table tbody tr td .main .d-flex {
+    padding-right: 30px;
+}
+
+image {
+    border-left: 30px;
+}
+
+.cart .table tbody tr td .main .d-flex img {
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+.counter i {
+    border: 1px solid black;
+    padding: 6px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.checkout ul {
+    border: 2px solid black;
+    background: #f3f3f3;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 16px;
+    padding-bottom: 20px;
+}
+
+.checkout ul li {
+    list-style: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #252525;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.checkout ul li.subtotal {
+    font-weight: lighter;
+    text-transform: capitalize;
+    border-bottom: 1px solid rgb(15, 15, 15);
+    padding-bottom: 14px;
+
+}
+
+.checkout ul li .subtotal span {
+    font-weight: bold;
+
+}
+
+.checkout ul li.cart-total {
+    padding-top: 10px;
+
+}
+
+.checkout ul li.cart-total span {
+    color: #e7ab3c !important;
+
+}
+
+.checkout ul li span {
+    float: right;
+}
+
+.checkout .proc-btn {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background: #252525;
+    text-transform: uppercase;
+    padding: 15px 25px 14px 25px;
+    /* margin-bottom: 20px; */
+    /* margin-left: 15px; */
+    display: block;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /* width: 400px; */
+}
+
+.card {
+    position: relative;
+    top: 5vh;
+    bottom: 10vh;
+    margin: auto;
+    width: 400px;
+    height: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #000;
+    border-radius: 10px;
+    resize: both;
+    overflow: auto;
+}
+
+.card-title {
+    padding-top: 10px;
+    text-align: center;
+}
+
+#btn1 {
+    margin-left: 20px;
+    float: left;
+}
+
+#btn2 {
+    margin-right: 20px;
+    float: right;
+}
+
+.bg {
+    background: url('https://www.wallpapertip.com/wmimgs/167-1674069_blue-abstract-wallpapers-hd.jpg') no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: 100%;
+}
+
+.card-text {
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: poppins;
+    text-align: center;
+}
+.buy-btn {
+    left: 50%;
+    width: 100px;
+    /* height: 40px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    color: #252525;
+    font-weight: 700;
+    /* letter-spacing: 1px; */
+    font-family: calibri;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+}
+
+.buy-btn:hover {
+    color: #ffffff;
+    background-color: #f15fa3;
+    transition: all ease 0.3s;
+
+}
+
+.ord-btn {
+    left: 50%;
+    width: 250px;
+    height: 50px;
+
+    align-items: center;
+    background-color: #ffffff;
+    color: #252525;
+    font-weight: 700;
+
+
+    font-family: calibri;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+
+    margin: 0;
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.ord-btn:hover{
+    color: #ffffff;
+    background-color: #f15fa3;
+    transition: all ease 0.3s;
+}
+.quantity-input{
+    font-size: 1.2em;
+    padding: 0px 5px;
+}

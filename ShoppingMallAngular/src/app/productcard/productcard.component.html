@@ -1,0 +1,34 @@
+<div class="box">
+
+    <div class="slide-img" >
+        <div class="click-to-top">
+            <img id="abc"
+                src="{{product.productImageUrl}}"
+                alt="">
+            <span *ngIf="product.description">
+                <h4 style="text-align: center;">Description</h4>
+                {{product.description}}
+            </span>
+
+        </div>
+
+    </div>
+    <!-- Detail box -->
+    <div class="detail-box ">
+        <div class="type">
+            <a href="#">{{product.productName}}</a>
+            <span>₹{{product.price}}</span>
+        </div>
+        <div class="quantity" *ngIf="cart else notInCart">
+            <!-- <input type="number" class="quantity-input" value="{{cart.qty}}" min="1" max="{{product.stock}}"> -->
+            <span class="quantity-input">{{cart.qty}}</span>
+            <button class="quantity-button quantity-up" (click)="increaseQty()">➕</button>
+            <button class="quantity-button quantity-down" (click)="decreaseQty()">➖</button>
+        </div>
+        <ng-template #notInCart>
+            <a  (click)="addToCart()" class="buy-btn">Add to cart</a>
+        </ng-template>
+
+    </div>
+
+</div>

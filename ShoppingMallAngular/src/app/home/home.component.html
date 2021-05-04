@@ -1,0 +1,6 @@
+<div class="container">
+    <app-managerhome *ngIf="user?.role=='M' else CustomerHome"></app-managerhome>
+    <ng-template #CustomerHome>
+        <app-customerhome></app-customerhome>
+    </ng-template>    
+</div>

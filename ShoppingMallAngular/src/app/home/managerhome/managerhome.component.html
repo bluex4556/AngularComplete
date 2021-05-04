@@ -1,0 +1,6 @@
+<span>
+    <h1>Manager Dashboard</h1>
+    <button  routerLink="/addshop">Add a shop</button>   
+</span>
+<h2>Your shops</h2>
+<app-shopcard *ngFor="let shop of shops" [shop]="shop" [manager]=true></app-shopcard>

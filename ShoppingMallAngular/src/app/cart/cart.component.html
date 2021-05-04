@@ -1,0 +1,46 @@
+<section class="mt-5">
+    <div class="table-responsive">
+        <table class="table table_n">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col" class="text-white">Product</th>
+                    <th scope="col" class="text-white">Price</th>
+                    <th scope="col" class="text-white">Quantity</th>
+                    <th scope="col" class="text-white">Total</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let cart of carts" style="align-items: center;">
+                <tr>
+                    <td>
+                        <div class="main">
+                            <div>
+                                <img style="width: 145px;height: 98px;"
+                                    src="{{cart.product!.productImageUrl}}">
+                            </div>
+                            <div class="des">
+                                {{cart.product!.productName}}
+                            </div>
+                        </div>
+                    </td>
+                    <td style="vertical-align: middle;">
+                        <h6 id="pri">{{cart.product!.price}}</h6>
+                    </td>
+                    <td style="vertical-align: middle;">
+                        <div class="counter">
+                            <i (click)="decreaseQty(cart)" class="fas fa-angle-down"></i>
+                            <span class="quantity-input">{{cart.qty}}</span>
+                            <i (click)="increaseQty(cart)" class="fas fa-angle-up"></i>
+                        </div>
+                    </td>
+                    <td style="vertical-align: middle;">
+                        <h5>₹<span id="tot">{{cart.product!.price*cart.qty}}</span></h5>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+    <div >
+        <button (click)="order()"class="ord-btn">Order </button>
+    </div>

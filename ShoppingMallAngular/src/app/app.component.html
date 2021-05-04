@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+    <div class="container-fluid ">
+        <a class="navbar-brand" routerLink="home">
+            <img src="https://www.nicepng.com/png/detail/243-2438209_com-online-shopping-computer-icons-shopping-cart-mobile.png"
+                alt="" width="30" height="24" class="d-inline-block align-text-top">
+            <b>Shoppify</b>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="home"><b>Home</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="about"><b>About</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="contact"><b>Contact</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/cart" *ngIf="(user?.userName&&user?.role=='C')"><b>Cart</b></a>
+                </li>
+            </ul>
+
+            <ng-autocomplete 
+                [data]="searchProducts"
+                placeholder="Search"
+                searchKeyword="productName"
+                (inputChanged) = "onChangeSearch($event)"
+                (selected)="goToProduct($event)"
+                historyIdentifier="searchHistory"
+                [historyListMaxNumber]="2"
+                [itemTemplate]="itemTemplate"
+            >
+            </ng-autocomplete>
+              <ng-template #itemTemplate let-item>
+                <a [innerHTML]="item.productName"></a>
+              </ng-template>
+            <ul class="navbar-nav navbar-right">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <b *ngIf="user?.userName else noUser">Hello {{user?.userName}}</b>
+                        <ng-template #noUser>Hi User</ng-template>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <span *ngIf="user?.userName else noUserLinks">
+                            <li><a class="dropdown-item"  (click)="logout()" routerLink="home">Logout</a></li>    
+                            <li><a class="dropdown-item" routerLink="profile">Profile</a></li>                               
+                        </span>
+                        <ng-template #noUserLinks>
+                            <li><a class="dropdown-item" routerLink="login">Login</a></li>
+                            <li><a class="dropdown-item" routerLink="signup">Sign Up</a></li>
+                        </ng-template>
+                        <div *ngIf="(user?.userName&&user?.role=='C')">
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" routerLink="orders">Orders</a></li>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<router-outlet></router-outlet>

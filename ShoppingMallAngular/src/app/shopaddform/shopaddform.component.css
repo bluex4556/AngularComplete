@@ -1,0 +1,14 @@
+form{
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #000;
+    padding: 30px;
+}
+h1 {
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 50%;
+    }
+}

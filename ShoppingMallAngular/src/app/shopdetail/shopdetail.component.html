@@ -1,0 +1,16 @@
+<div class="card bg-dark text-white" *ngIf="shop">
+    <img src="{{shop?.shopImageUrl}}" class="card-img" alt="...">
+    <div class="card-img-overlay">
+        <h1 class="card-title">{{shop.shopName}}</h1>
+        <p class="card-text">{{shop.description}}</p>
+    </div>
+</div>
+
+<h1 id="products" style="text-align: center;">Our Products</h1>
+<div>
+    <span *ngFor="let product of products">
+        <app-productcard [product]="product" [cart]="checkInCart(product)"></app-productcard>
+    </span>
+</div>
+
+<div id="bottom"></div>

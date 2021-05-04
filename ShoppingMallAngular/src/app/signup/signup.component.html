@@ -1,0 +1,54 @@
+<style>
+
+        form{
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px #000;
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                width: 50%;
+            }
+        }
+
+</style>
+<br>
+    <div class="container">
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit(signupForm.value)">
+            <h1>Sign Up</h1>
+            <div class="mb-3">
+                <label for="userName" class="form-label">User Name</label>
+                <input type="text" required class="form-control" id="userName" formControlName="userName">
+            </div>
+            <div class="mb-3">
+                <label for="Email1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp" formControlName="email">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="Password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="Password" formControlName="password">
+            </div>
+            <div class="mb-3">
+                <label for="PasswordCnf" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="PasswordCnf" formControlName="confirmPassword">
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="role" id="User" value="C"
+                     formControlName="role">
+                <label class="form-check-label" for="User">Customer</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="role" id="Manager" value="M" formControlName="role">
+                <label class="form-check-label" for="Manager" >Manager</label>
+            </div>
+            <br>
+            <br>
+           <button type="submit" class="btn btn-primary btn-lg" [disabled]="signupForm.invalid">Submit</button>
+        </form>
+    
+    </div>
